@@ -18,9 +18,6 @@ dependencies {
 	
 	//This Dependency is added to avoid restarting the server frequently
 	compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.0.4.RELEASE'
-	
-	//This Dependency for the view Pages It enables the support for the JSP Pages
-	compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '9.0.37'
 	// https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf
 	compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf'
 	
