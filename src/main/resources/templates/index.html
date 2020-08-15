@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bootstrap Example</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		.bc{
+			background-color: #e9ecef;
+		}
+	</style>
+</head>
+<body>
+<div id="header"></div>
+	<!-- Main Body Part starts here -->
+	<div class="container jumbotron rounded pt-1">
+		<div class="btn btn-light create mb-2">Create</div>
+		<div class="btn btn-light sort mb-2 float-right">Sort By</div>
+		
+		<div class="card border rounded mb-2">
+		  <div class="card-header">
+		  	<span>Featured</span>
+		  	<span class="float-right update btn btn-sm btn-light" title= "update post">
+		  		<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+		  	</span>
+		  </div>
+		  <div class="card-body">
+		    <h5 class="card-title">Post 1</h5>
+		    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+			</p>
+		    <a href="#" class="like"><i class="fa fa-2x fa-thumbs-o-up" aria-hidden="true"></i></a>
+		    <span> 123</span>
+		  </div>
+		</div>
+		<div class="card border rounded mb-2">
+		  <div class="card-header">
+		  	<span>Featured</span>
+		  	<span class="float-right update btn btn-sm btn-light" title= "update post">
+		  		<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+		  	</span>
+		  </div>
+		  <div class="card-body">
+		    <h5 class="card-title">Post 2</h5>
+		    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+			</p>
+		    <a href="#" class="like"><i class="fa fa-2x fa-thumbs-o-up" aria-hidden="true"></i></a>
+		    <span> 123</span>
+		  </div>
+		</div>
+		<div class="card border rounded mb-2">
+		  <div class="card-header">
+		  	<span>Featured</span>
+		  	<span class="float-right update btn btn-sm btn-light" title= "update post">
+		  		<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+		  	</span>
+		  </div>
+		  <div class="card-body">
+		    <h5 class="card-title">Post 3</h5>
+		    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+			</p>
+		    <a href="#" class="like"><i class="fa fa-2x fa-thumbs-o-up" aria-hidden="true"></i></a>
+		    <span> 112</span>
+		  </div>
+		</div>
+		<div class="card border rounded mb-2">
+		  <div class="card-header">
+		  	<span>Featured</span>
+		  	<span class="float-right update btn btn-sm btn-light" title= "update post">
+		  		<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+		  	</span>
+		  </div>
+		  <div class="card-body">
+		    <h5 class="card-title">Post 4</h5>
+		    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+			</p>
+		    <a href="#" class="like"><i class="fa fa-2x fa-thumbs-o-up" aria-hidden="true"></i></a>
+		    <span> 132</span>
+		  </div>
+		</div>
+	</div>
+	<!-- Main Body Part ends here -->
+<div id="cModal"></div>	
+<div id="footer"></div>
+<script>
+	$("#header").load("navigation.html");
+	$("#cModal").load("modal.html");
+	$("#footer").load("footer.html");
+</script>
+<script src="js/index.js"></script>
+</body>

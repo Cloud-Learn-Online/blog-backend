@@ -8,11 +8,11 @@ public class WebControlller {
 	
 	@GetMapping("/")
 	public String homepage() { 
-		return "home";
+		return "index";
 	}
 	
 	@GetMapping("/login")
 	public String login() { 
-		return "login";
+		return "log";
 	}
 }

@@ -21,6 +21,8 @@ dependencies {
 	
 	//This Dependency for the view Pages It enables the support for the JSP Pages
 	compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '9.0.37'
+	// https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf'
 	
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
