@@ -14,8 +14,8 @@ public class BlogBackendApplication {
 		SpringApplication.run(BlogBackendApplication.class, args);
 	}
 
-	@RequestMapping("/helloo")
-	public  String hello() {
-		return "Hello World!";
-	}
+//	@RequestMapping("/helloo")
+//	public  String hello() {
+//		return "Hello World!";
+//	}
 }
