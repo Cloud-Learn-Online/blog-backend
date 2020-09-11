@@ -2,6 +2,7 @@ package com.blog.model;
 
 import com.sun.istack.NotNull;
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name="posts")
@@ -10,9 +11,19 @@ public class Post {
     private int id;
     private String PostHeading;
     private String Descrition;
-    @ManyToOne
-    @JoinColumn(name="user_id")
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @JoinColumn(name="userId")
     private User user;
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    private Date date = new Date();
 
     public Post(Post post) {
     }
@@ -54,4 +65,14 @@ public class Post {
         this.user = user;
     }
 
+    @Override
+    public String toString() {
+        return "Post{" +
+                "id=" + id +
+                ", PostHeading='" + PostHeading + '\'' +
+                ", Descrition='" + Descrition + '\'' +
+                ", user=" + user +
+                ", date=" + date +
+                '}';
+    }
 }

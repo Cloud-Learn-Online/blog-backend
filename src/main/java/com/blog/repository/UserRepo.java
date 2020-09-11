@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.RestController;
 @Repository
 public interface UserRepo extends JpaRepository<User, Integer>{
-    User findByUserId(int id);
+
 }

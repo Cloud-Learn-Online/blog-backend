@@ -15,7 +15,7 @@ public class User {
     private String userDetails;
     private int phoneNumber;
     @OneToMany(mappedBy = "user")
-    private List<Post> userblogs ;
+    private List<Post> userblogs =new ArrayList<Post>();
 
     public int getUserId() {
         return userId;
