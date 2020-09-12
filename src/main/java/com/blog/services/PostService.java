@@ -1,5 +1,14 @@
 package com.blog.services;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.blog.dto.PostResponse;
 import com.blog.exceptions.BlogNotFoundException;
 import com.blog.exceptions.UserNotFoundException;
@@ -8,13 +17,6 @@ import com.blog.model.Post;
 import com.blog.model.User;
 import com.blog.repository.PostRepo;
 import com.blog.repository.UserRepo;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
-import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
 
 @Service
 public class PostService {
@@ -39,6 +41,7 @@ public class PostService {
         Post post1= post.get();
         return PostHelper.getPostResponse(post1);
     }
+    
     public List<PostResponse> getBlogByUserId(int userid) {
         List<PostResponse> postList=new ArrayList<>();
         Optional<User> userOptional= userRepo.findById(userid);
@@ -53,6 +56,7 @@ public class PostService {
         return postList;
     }
 
+    @Transactional
     public PostResponse createBlog(Post post, int id) {
         Optional<User> userTemp = userRepo.findById(id);
         if (userTemp.isPresent()) {
@@ -65,19 +69,20 @@ public class PostService {
         return null;
     }
 
+    @Transactional
     public PostResponse updateBlogbyId(int id, Post post) {
         Optional<Post> postOptional=postRepo.findById(id);
         if(!postOptional.isPresent())
             throw new BlogNotFoundException("Blog does not exist");
         Post post1 = postOptional.get();
         post1.setId(post.getId());
-        post1.setDescrition(post.getDescrition());
+        post1.setDescription(post.getDescription());
         post1.setPostHeading(post.getPostHeading());
         final Post post2=postRepo.save(post1);
         return PostHelper.getPostResponse(post2);
     }
 
-
+    @Transactional
     public void deletePostByPostId(int id) {
         Optional<Post> post=postRepo.findById(id);
         if(!post.isPresent())
@@ -85,6 +90,7 @@ public class PostService {
         postRepo.deleteById(id);
     }
 
+    @Transactional
     public void deleteAll() {
         if(postRepo==null)
             throw new BlogNotFoundException("Blog does not exist");

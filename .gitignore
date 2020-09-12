@@ -18,8 +18,30 @@
 *.zip
 *.tar.gz
 *.rar
+
+#Do not ignore the gradle wrapped Jar So that it could be common for all the user.
 !gradle/wrapper/gradle-wrapper.jar
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 /.gradle/
 /build/
+
+# Ignore the IDE files as well
+/.idea/
+
+# Eclipse specific file which should not be Committed
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
