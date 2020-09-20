@@ -11,7 +11,7 @@ public class PostHelper {
         PostResponse postResponse = new PostResponse();
         postResponse.setId(post.getId());
         postResponse.setPostHeading(post.getPostHeading());
-        postResponse.setDescrition(post.getDescrition());
+        postResponse.setDescrition(post.getDescription());
         return postResponse;
     }
 

@@ -1,20 +1,30 @@
 package com.blog.model;
 
-import com.sun.istack.NotNull;
-import javax.persistence.*;
 import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
 @Table(name="posts")
 public class Post {
     @Id
     private int id;
-    private String PostHeading;
-    private String Descrition;
+    
+    private String postHeading;
+    
+    private String description;
+    
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name="userId")
     private User user;
-
+    
+    private Date date = new Date();
+    
     public Date getDate() {
         return date;
     }
@@ -22,8 +32,6 @@ public class Post {
     public void setDate(Date date) {
         this.date = date;
     }
-
-    private Date date = new Date();
 
     public Post(Post post) {
     }
@@ -38,11 +46,11 @@ public class Post {
     }
 
     public void setPostHeading(String postHeading) {
-        PostHeading = postHeading;
+        this.postHeading = postHeading;
     }
 
-    public void setDescrition(String descrition) {
-        Descrition = descrition;
+    public void setDescription(String descrition) {
+        this.description = descrition;
     }
 
     public int getId() {
@@ -50,11 +58,11 @@ public class Post {
     }
 
     public String getPostHeading() {
-        return PostHeading;
+        return postHeading;
     }
 
-    public String getDescrition() {
-        return Descrition;
+    public String getDescription() {
+        return description;
     }
 
     public User getUser() {
@@ -69,8 +77,8 @@ public class Post {
     public String toString() {
         return "Post{" +
                 "id=" + id +
-                ", PostHeading='" + PostHeading + '\'' +
-                ", Descrition='" + Descrition + '\'' +
+                ", PostHeading='" + postHeading + '\'' +
+                ", Descrition='" + description + '\'' +
                 ", user=" + user +
                 ", date=" + date +
                 '}';
